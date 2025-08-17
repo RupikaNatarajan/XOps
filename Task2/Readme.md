@@ -34,3 +34,8 @@ This project demonstrates how to deploy a web server on an AWS EC2 instance usin
 4. **Access the Web Server:**
    ```sh
    Once the deployment is complete, open your browser and navigate to the public IP address shown in the Terraform output to view the web page.
+
+
+Screenshot:
+<img width="1888" height="855" alt="image" src="https://github.com/user-attachments/assets/ea529530-8f6e-4c10-a13f-962adb11b9d8" />
+
