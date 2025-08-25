@@ -37,5 +37,6 @@ This project demonstrates how to deploy a web server on an AWS EC2 instance usin
 
 
 Screenshot:
-<img width="1888" height="855" alt="image" src="https://github.com/user-attachments/assets/ea529530-8f6e-4c10-a13f-962adb11b9d8" />
+<img width="1850" height="998" alt="image" src="https://github.com/user-attachments/assets/6ab80b06-5a30-42af-ad7a-5acfd667dcd9" />
+
 
