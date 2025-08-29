@@ -44,15 +44,6 @@ kubectl port-forward deployment/xops-web 1298:80
  
 Visit: `http://localhost:1298`
  
-## Kubernetes Components
- 
-* **API Server**: Handles REST requests.
-* **Scheduler**: Assigns Pods to nodes.
-* **Controller Manager**: Maintains cluster state.
-* **etcd**: Key-value cluster store.
-* **kubelet**: Node agent managing Pods.
-* **kube-proxy**: Handles networking and service routing.
- 
 ## Clean Up
  
 ```powershell
