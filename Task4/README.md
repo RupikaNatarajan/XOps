@@ -42,7 +42,8 @@ Below are example screenshots placed in the `screenshots/` folder:
 
  
 ### Ansible Run Output
-![Ansible Output]<img width="1151" height="580" alt="image" src="https://github.com/user-attachments/assets/5866505c-7fdd-464b-a2e4-57fbdd0a27d4" />
+![Ansible Output]<img width="1870" height="850" alt="image" src="https://github.com/user-attachments/assets/58af41d1-d3fe-47d8-9c54-720dfb273e8c" />
+
 
  
 ## Files
