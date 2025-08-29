@@ -21,6 +21,10 @@ This project demonstrates how to containerize and host a simple static web page 
 3. **View the web page:**
    Open your browser and go to [http://localhost:8080](http://localhost:8080)
 
+4. **Screenshot**
+   <img width="1836" height="954" alt="image" src="https://github.com/user-attachments/assets/b8f108d7-7bf5-4717-9fe0-98fef49a62af" />
+
+
 ## Notes
 - The container uses the official `nginx:alpine` image for minimal size and efficiency.
 - The `index.html` file is served at the root path (`/`).
