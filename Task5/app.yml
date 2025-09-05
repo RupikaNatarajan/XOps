@@ -1,0 +1,107 @@
+# -------------------------------
+# ConfigMap with updated HTML content and styles
+# -------------------------------
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: xops-web-content
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>XOps – Updated Kubernetes Dashboard</title>
+      <style>
+        body { 
+          margin: 0; 
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+          background: linear-gradient(135deg, #0b1220, #1a1a2e); 
+          color: #e6edf3; 
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          height: 100vh; 
+        }
+        .card { 
+          max-width: 700px; 
+          padding: 30px; 
+          background: #16213e; 
+          border-radius: 16px; 
+          border: 2px solid #0f3460; 
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        h1 { 
+          margin-top: 0; 
+          font-size: 32px; 
+          color: #f9c74f;
+        }
+        p { 
+          font-size: 16px; 
+          line-height: 1.5;
+        }
+        a {
+          color: #f94144;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <h1>Welcome to XOps Dashboard</h1>
+        <p>Your updated NGINX application is live on a Kubernetes cluster deployed with <b>kind</b>.</p>
+    </body>
+    </html>
+
+# -------------------------------
+# Deployment for NGINX
+# -------------------------------
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xops-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xops-web
+  template:
+    metadata:
+      labels:
+        app: xops-web
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: html-volume
+          configMap:
+            name: xops-web-content
+
+# -------------------------------
+# NodePort Service to expose app
+# -------------------------------
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: xops-web
+spec:
+  type: NodePort
+  selector:
+    app: xops-web
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 31349   # Change if needed or remove
