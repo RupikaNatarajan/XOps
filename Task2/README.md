@@ -36,4 +36,5 @@ To remove the deployed infrastructure, run:
 
 
 **Screenshot**
-![alt text](Task2_output.png)
+
+<img width="1850" height="998" alt="Task2_output" src="https://github.com/user-attachments/assets/2973c3ed-760a-49bd-bb28-8f426c78a7a7" />
