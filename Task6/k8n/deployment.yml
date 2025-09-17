@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: rupikan/app:196e609275575509c2f5f4be29c9ddf5fb8864c0
+          image: rupikan/app:6725f9ffcffd6b09c8f94e4426223369bb0e4b00
           ports:
             - containerPort: 80
           resources:              # optional but good practice
