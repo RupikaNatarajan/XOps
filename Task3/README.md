@@ -29,4 +29,5 @@ This project is part of the XOps series demonstrating automated deployment of a 
     npm start
 
 **Screenshots**
-![alt text](<Screenshot 2025-08-29 130121.png>)
+
+<img width="1829" height="630" alt="Screenshot 2025-08-29 130121" src="https://github.com/user-attachments/assets/98cbc963-0d2e-4255-b407-28f34e64263d" />
